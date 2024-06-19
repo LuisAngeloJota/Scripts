@@ -72,7 +72,7 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DataCollection
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Value 1 -Type Dword -Force
 
-# Disable Window Defender SmartScreen
+# Disable Windows Defender SmartScreen
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\System" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\System" -Name "EnableSmartScreen" -Value 0 -Type Dword -Force
 
@@ -83,3 +83,5 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error 
 # Disable Virtualization Based Security
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -Name "EnableVirtualizationBasedSecurity" -Value 0 -Type Dword -Force
+
+Write-Host "Script execution completed."
