@@ -81,3 +81,7 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\System" -Name 
 # Disable Windows Error Reporting
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting" -Name "Disabled" -Value 1 -Type Dword -Force
+
+# Disable Virtualization Based Security
+New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -ItemType Directory -Force
+Set-ItemProperty -Path "HKLM:\Policies\Microsoft\Windows\DeviceGuard" -Name "EnableVirtualizationBasedSecurity" -Value 0 -Type Dword -Force
