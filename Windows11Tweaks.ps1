@@ -84,4 +84,4 @@ Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error 
 
 # Disable Virtualization Based Security
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -ItemType Directory -Force
-Set-ItemProperty -Path "HKLM:\Policies\Microsoft\Windows\DeviceGuard" -Name "EnableVirtualizationBasedSecurity" -Value 0 -Type Dword -Force
+Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -Name "EnableVirtualizationBasedSecurity" -Value 0 -Type Dword -Force
