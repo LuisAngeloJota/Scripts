@@ -8,8 +8,6 @@ fsutil behavior set disableLastAccess 1
 # Disable Memory Compression
 Disable-MMAgent -mc
 
-### Registry Tweaks
-
 # Disable Firewall
 New-Item -Path "HKLM:\Software\Policies\Microsoft\WindowsFirewall\DomainProfile" -ItemType Directory -Force
 New-Item -Path "HKLM:\Software\Policies\Microsoft\WindowsFirewall\StandardProfile" -ItemType Directory -Force
