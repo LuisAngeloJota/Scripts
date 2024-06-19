@@ -24,7 +24,7 @@ Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\M
 Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\Memory Management" -Name "FeatureSettingsOverrideMask" -Value 3 -Type DWord -Force
 
 # Set Win32PrioritySeparation to Long, Variable, 3x Foreground Boost
-Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\PriorityControl" -Name "Win32PrioritySeparation" -Value 22 -Type DWord -Force
+Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\PriorityControl" -Name "Win32PrioritySeparation" -Value 24 -Type DWord -Force
 
 # Windows Update Tweaks
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate" -ItemType Directory -Force
