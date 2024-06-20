@@ -60,28 +60,10 @@ New-Item -Path "HKLM:\Software\Policies\Microsoft\W32time\Parameters" -ItemType 
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\W32time\Parameters" -Name "NtpServer" -Value "time.cloudflare.com" -Type String -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\W32time\Parameters" -Name "Type" -Value "NTP" -Type String -Force
 
-# Disable AutoPlay
-New-Item -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -ItemType Directory -Force
-Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "NoDriveTypeAutoRun" -Value 255 -Type Dword -Force
-
 # Disable Diagnostic Data
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\DataCollection" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Value 0 -Type Dword -Force
 
-# Disable Windows Defender Antivirus
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -ItemType Directory -Force
-Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Value 1 -Type Dword -Force
-
-# Disable Windows Defender SmartScreen
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\System" -ItemType Directory -Force
-Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\System" -Name "EnableSmartScreen" -Value 0 -Type Dword -Force
-
 # Disable Windows Error Reporting
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting" -ItemType Directory -Force
 Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting" -Name "Disabled" -Value 1 -Type Dword -Force
-
-# Disable Virtualization Based Security
-New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -ItemType Directory -Force
-Set-ItemProperty -Path "HKLM:\Software\Policies\Microsoft\Windows\DeviceGuard" -Name "EnableVirtualizationBasedSecurity" -Value 0 -Type Dword -Force
-
-Write-Host "Script execution completed."
