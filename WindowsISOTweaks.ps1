@@ -68,8 +68,8 @@ reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTel
 # Disable Windows Error Reporting
 reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v Disabled /t REG_DWORD /d 1 /f
 
-# Unload the SYSTEM hive
-Write-Host "Unloading the SYSTEM hive..."
+# Unload the registry
+Write-Host "Unloading registry..."
 reg unload "HKLM\TMPSOFTWARE"
 reg unload "HKLM\TMPSYSTEM"
 
