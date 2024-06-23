@@ -18,7 +18,7 @@ DISM /Mount-Image /ImageFile:install.wim /Index:$index /MountDir:$mountDir /Opti
 reg load "HKLM\TMPSOFTWARE" "$mountDir\Windows\System32\config\SOFTWARE"
 reg load "HKLM\TMPSYSTEM" "$mountDir\Windows\System32\config\SYSTEM"
 
-# Set registry tweaks
+# Set tweaks
 Write-Host "Setting tweaks..."
 
 # Disable WPBT
