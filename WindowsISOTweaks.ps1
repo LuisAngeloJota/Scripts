@@ -21,14 +21,6 @@ reg load "HKLM\TMPSYSTEM" "$mountDir\Windows\System32\config\SYSTEM"
 # Set tweaks
 Write-Host "Setting tweaks..."
 
-# NTFS Tweaks
-fsutil 8dot3name set 1
-fsutil behavior set disableCompression 1
-fsutil behavior set disableLastAccess 1
-
-# Disable Memory Compression
-powershell Disable-MMAgent -mc
-
 # Disable WPBT
 reg add "HKLM\TMPSYSTEM\ControlSet001\Control\Session Manager" /v DisableWpbtExecution /t REG_DWORD /d 1 /f
 
