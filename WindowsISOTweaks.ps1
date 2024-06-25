@@ -68,6 +68,15 @@ reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTel
 # Disable Windows Error Reporting
 reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v Disabled /t REG_DWORD /d 1 /f
 
+# Disable Windows Defender Antivirus
+reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
+
+# Disable Window Defender SmartScreen
+reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\System" /v EnableSmartScreen /t REG_DWORD /d 0 /f
+
+# Disable Virtualization Based Security
+reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtualizationBasedSecurity /t REG_DWORD /d 0 /f
+
 # Unload the registry
 reg unload "HKLM\TMPSOFTWARE"
 reg unload "HKLM\TMPSYSTEM"
