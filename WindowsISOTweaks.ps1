@@ -80,6 +80,9 @@ reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtu
 # Disable Tamper Protection
 reg add "HKLM\TMPSOFTWARE\Microsoft\Windows Defender\Features" /v TamperProtection /t REG_DWORD /d 0 /f
 
+# Use UTC Time
+reg add "HKLM\TMPSYSTEM\ControlSet001\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f
+
 # Unload the registry
 reg unload "HKLM\TMPSOFTWARE"
 reg unload "HKLM\TMPSYSTEM"
