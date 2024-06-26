@@ -64,5 +64,5 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtuali
 REM Use UTC Time
 reg add "HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f
 
-echo Registry tweaks applied successfully.
+echo Tweaks applied successfully!
 pause
