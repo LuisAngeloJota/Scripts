@@ -77,6 +77,9 @@ reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\System" /v EnableSmartScree
 # Disable Virtualization Based Security
 reg add "HKLM\TMPSOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtualizationBasedSecurity /t REG_DWORD /d 0 /f
 
+# Disable Tamper Protection
+reg add "HKLM\TMPSOFTWARE\Microsoft\Windows Defender\Features" /v TamperProtection /t REG_DWORD /d 0 /f
+
 # Unload the registry
 reg unload "HKLM\TMPSOFTWARE"
 reg unload "HKLM\TMPSYSTEM"
