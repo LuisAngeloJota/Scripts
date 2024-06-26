@@ -52,15 +52,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTeleme
 REM Disable Windows Error Reporting
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v Disabled /t REG_DWORD /d 1 /f
 
-REM Disable Windows Defender Antivirus
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
-
-REM Disable Window Defender SmartScreen
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v EnableSmartScreen /t REG_DWORD /d 0 /f
-
-REM Disable Virtualization Based Security
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtualizationBasedSecurity /t REG_DWORD /d 0 /f
-
 REM Use UTC Time
 reg add "HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f
 
