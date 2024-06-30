@@ -6,7 +6,6 @@ fsutil behavior set disableCompression 1
 fsutil behavior set disableLastAccess 1
 
 REM Disable Memory Compression
-powershell.exe Disable-MMAgent -alp
 powershell.exe Disable-MMAgent -apl
 powershell.exe Disable-MMAgent -mc
 
