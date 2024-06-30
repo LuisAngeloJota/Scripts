@@ -58,5 +58,8 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v Di
 REM Use UTC Time
 reg add "HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f
 
+REM Disable Fast Startup
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v HiberbootEnabled /t REG_DWORD /d 0 /f
+
 echo Tweaks applied successfully!
 pause
