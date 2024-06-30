@@ -1,12 +1,15 @@
 @echo off
 
+REM Disable Memory Compression
+powershell.exe Disable-MMAgent -mc
+
+REM Disable SysMain
+sc config "SysMain" start=disabled
+
 REM NTFS Tweaks
 fsutil 8dot3name set 1
 fsutil behavior set disableCompression 1
 fsutil behavior set disableLastAccess 1
-
-REM Disable Memory Compression
-powershell.exe Disable-MMAgent -mc
 
 REM Disable Firewall
 reg add "HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile" /v EnableFirewall /t REG_DWORD /d 0 /f
