@@ -1,5 +1,8 @@
 @echo off
 
+REM Disable Hyper-V
+bcdedit /set hypervisorlaunchtype off
+
 REM Disable Memory Compression
 powershell.exe Disable-MMAgent -mc
 
