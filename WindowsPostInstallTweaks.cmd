@@ -64,8 +64,5 @@ reg add "HKLM\SYSTEM\ControlSet001\Control\TimeZoneInformation" /v RealTimeIsUni
 REM Disable Fast Startup
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v HiberbootEnabled /t REG_DWORD /d 0 /f
 
-REM Disable Virtualization Based Security
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v EnableVirtualizationBasedSecurity /t REG_DWORD /d 0 /f
-
 echo Tweaks applied successfully!
 pause
