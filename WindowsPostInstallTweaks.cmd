@@ -67,5 +67,8 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v HypervisorEnfo
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v LsaCfgFlags /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard" /v ConfigureSystemGuardLaunch /t REG_DWORD /d 2 /f
 
+REM Remove Recycle Bin From Desktop
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\NonEnum" /v {645FF040-5081-101B-9F08-00AA002F954E} /t REG_DWORD /d 1 /f
+
 echo Tweaks applied successfully!
 pause
